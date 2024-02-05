@@ -16,7 +16,7 @@ if (response.status == 201){
 }else{ return false;
 }
 }
-export async function gwtRoomTypes(){
+export async function getRoomTypes(){
     try{
 
 
