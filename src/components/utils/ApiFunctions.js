@@ -18,9 +18,10 @@ if (response.status == 201){
 }
 export async function getRoomTypes(){
     try{
+   const response = await api.get("/rooms/room-types") 
+    return response.data
 
-
-    }catch(){
-
+    }catch(error){
+    throw new Error("Error fetching room types!")
     }
 }
