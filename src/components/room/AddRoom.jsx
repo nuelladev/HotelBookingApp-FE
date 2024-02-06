@@ -23,18 +23,18 @@ const AddRoom = () => {
 		}
 		setNewRoom({ ...newRoom, [name]: value })
 	}
-    const handle handleImageChange = (e) => {
-     const selectedImage = e.target.files[0]
-     setNewRoom({...})
-
-    }
+    const handleImageChange = (e) => {
+		const selectedImage = e.target.files[0]
+		setNewRoom({ ...newRoom, photo: selectedImage })
+		setImagePreview(URL.createObjectURL(selectedImage))
+	}
 }
   return (
     <div>
       
     </div>
   )
-}
+
 
 export default AddRoom
  
