@@ -35,7 +35,7 @@ const AddRoom = () => {
 			const success = await addRoom(newRoom.roomPhoto, newRoom.roomType, newRoom.roomPrice)
 			if (success !== undefined) {
 				setSuccessMessage("A new room was  added successfully !")
-				setNewRoom({ photo: null, roomType: "", roomPrice: "" })
+				setNewRoom({ roomPhoto: null, roomType: "", roomPrice: "" })
 				setImagePreview("")
 				setErrorMessage("")
 			} else {
