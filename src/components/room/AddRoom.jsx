@@ -28,7 +28,26 @@ const AddRoom = () => {
 		setNewRoom({ ...newRoom, photo: selectedImage })
 		setImagePreview(URL.createObjectURL(selectedImage))
 	}
-}
+	const handleSubmit = async (e) => {
+		e.preventDefault()
+		try {
+			const success = await addRoom(newRoom.roomPhoto, newRoom.roomType, newRoom.roomPrice)
+			if (success !== undefined) {
+				setSuccessMessage("A new room was  added successfully !")
+				setNewRoom({ photo: null, roomType: "", roomPrice: "" })
+				setImagePreview("")
+				setErrorMessage("")
+			} else {
+				setErrorMessage("Error adding new room")
+			}
+		} catch (error) {
+			setErrorMessage(error.message)
+		}
+		setTimeout(() => {
+			setSuccessMessage("")
+			setErrorMessage("")
+		}, 3000)
+	}
   return (
     <div>
       
