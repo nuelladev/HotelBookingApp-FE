@@ -1,5 +1,5 @@
 import  { useState } from 'react'
-import addRoom from '../utils'
+import {addRoom } from '../utils/ApiFunctions'
 
 const AddRoom = () => {
     const [newRoom, setNewRoom] = useState({
