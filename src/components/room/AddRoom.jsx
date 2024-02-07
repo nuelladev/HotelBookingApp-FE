@@ -1,6 +1,8 @@
 import  { useState } from 'react'
 import {addRoom } from '../utils/ApiFunctions'
 import { Link } from "react-router-dom"
+import { RoomTypeSelector } from "../commons/RoomTypeSelector"
+
 
 const AddRoom = () => {
     const [newRoom, setNewRoom] = useState({
