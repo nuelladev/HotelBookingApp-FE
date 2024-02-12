@@ -43,8 +43,8 @@ const RoomTypeSelector = ({ handleRoomInputChange, newRoom }) => {
                         value={newRoom.roomType || ''}> {/* Ensure controlled component */}
                         <option value="">Select a room type</option>
                         <option value="Add New">Add New</option>
-                        {roomTypes.map((type, index) => (
-                            <option key={type} value={type}> {/* Use type as key if unique */}
+                        {roomTypes.map(type => ( // Removed index parameter
+                            <option key={type} value={type}>
                                 {type}
                             </option>
                         ))}
